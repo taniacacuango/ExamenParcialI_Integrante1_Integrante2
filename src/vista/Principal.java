@@ -1,5 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+     * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
@@ -50,6 +50,10 @@ public class Principal extends javax.swing.JFrame {
         txtNacionalidad = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        lblTexto10 = new javax.swing.JLabel();
+        lblTexto11 = new javax.swing.JLabel();
+        txtBiografia = new javax.swing.JTextField();
+        txtEdad = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,6 +105,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnAgregar.setBackground(new java.awt.Color(102, 153, 255));
         btnAgregar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnAgregar.setText("Agregar libro");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -151,17 +156,17 @@ public class Principal extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre Autor", "Apellido Autor", "Nacionalidad", "Título", "Código", "Autor", "Año de Publicación", "Bibliografía", "Editorial"
+                "Nombre Autor", "Apellido Autor", "Nacionalidad", "Biografía", "Edad", "Título", "Código", "Autor", "Año de publicación", "Bibliografía", "Editorial"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, true, true
+                false, false, false, false, false, false, false, false, false, true, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -169,6 +174,24 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+
+        lblTexto10.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblTexto10.setText("Biografía");
+
+        lblTexto11.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblTexto11.setText("Edad");
+
+        txtBiografia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBiografiaActionPerformed(evt);
+            }
+        });
+
+        txtEdad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEdadActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -185,12 +208,16 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblTexto2)
                     .addComponent(lblTexto3)
-                    .addComponent(lblTexto1))
+                    .addComponent(lblTexto1)
+                    .addComponent(lblTexto10)
+                    .addComponent(lblTexto11))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                    .addComponent(txtNombreAutor, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNacionalidad))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtApellido)
+                    .addComponent(txtNombreAutor)
+                    .addComponent(txtNacionalidad, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtBiografia)
+                    .addComponent(txtEdad, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -249,11 +276,15 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAnioPublicacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTexto7))
+                    .addComponent(lblTexto7)
+                    .addComponent(lblTexto10)
+                    .addComponent(txtBiografia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBibliografia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTexto8))
+                    .addComponent(lblTexto8)
+                    .addComponent(lblTexto11)
+                    .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEditorial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -289,6 +320,8 @@ public class Principal extends javax.swing.JFrame {
         String nombreAutor = txtNombreAutor.getText();
         String apellidoAutor = txtApellido.getText();
         String nacionalidad = txtNacionalidad.getText();
+        String biografia = txtBiografia.getText();
+        String edad = txtEdad.getText();
         String titulo = txtTitulo.getText();
         String codigo = txtCodigo.getText();
         String autor = txtAutor.getText();
@@ -300,12 +333,14 @@ public class Principal extends javax.swing.JFrame {
         
         ////////////////////////////////////
         javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
-    model.addRow(new Object[]{nombreAutor, apellidoAutor, nacionalidad, titulo, codigo, autor, anioPublicacion, bibliografia, editorial});
+    model.addRow(new Object[]{nombreAutor, apellidoAutor, nacionalidad, biografia,edad, titulo, codigo, autor, anioPublicacion, bibliografia, editorial});
     
     
     txtNombreAutor.setText("");
     txtApellido.setText("");
     txtNacionalidad.setText("");
+    txtBiografia.setText("");
+    txtEdad.setText("");
     txtTitulo.setText("");
     txtCodigo.setText("");
     txtAutor.setText("");
@@ -317,7 +352,6 @@ public class Principal extends javax.swing.JFrame {
     
         
     }//GEN-LAST:event_btnAgregarActionPerformed
-
     private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
         String titulo = txtTitulo.getText();
     }//GEN-LAST:event_txtTituloActionPerformed
@@ -349,6 +383,14 @@ public class Principal extends javax.swing.JFrame {
     private void txtEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEditorialActionPerformed
         String editorial = txtEditorial.getText();
     }//GEN-LAST:event_txtEditorialActionPerformed
+
+    private void txtBiografiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBiografiaActionPerformed
+        String biografia = txtBiografia.getText();
+    }//GEN-LAST:event_txtBiografiaActionPerformed
+
+    private void txtEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEdadActionPerformed
+        String edad = txtEdad.getText();
+    }//GEN-LAST:event_txtEdadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -393,6 +435,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblTexto1;
+    private javax.swing.JLabel lblTexto10;
+    private javax.swing.JLabel lblTexto11;
     private javax.swing.JLabel lblTexto2;
     private javax.swing.JLabel lblTexto3;
     private javax.swing.JLabel lblTexto4;
@@ -405,7 +449,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtAutor;
     private javax.swing.JTextField txtBibliografia;
+    private javax.swing.JTextField txtBiografia;
     private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtEditorial;
     private javax.swing.JTextField txtNacionalidad;
     private javax.swing.JTextField txtNombreAutor;

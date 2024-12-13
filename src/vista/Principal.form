@@ -54,12 +54,16 @@
                       <Component id="lblTexto2" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblTexto3" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblTexto1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTexto10" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTexto11" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="txtApellido" alignment="0" pref="280" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtApellido" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtNombreAutor" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtNacionalidad" max="32767" attributes="0"/>
+                      <Component id="txtNacionalidad" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtBiografia" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtEdad" alignment="0" pref="280" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="66" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -135,11 +139,15 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtAnioPublicacion" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblTexto7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTexto10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtBiografia" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtBibliografia" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblTexto8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTexto11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtEdad" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -231,6 +239,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAgregar">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="99" red="66" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="18" style="1"/>
             </Property>
@@ -315,20 +326,32 @@
             <Component class="javax.swing.JTable" name="jTable1">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="9" rowCount="4">
+                  <Table columnCount="11" rowCount="4">
                     <Column editable="false" title="Nombre Autor" type="java.lang.Object"/>
                     <Column editable="false" title="Apellido Autor" type="java.lang.Object"/>
                     <Column editable="false" title="Nacionalidad" type="java.lang.Object"/>
+                    <Column editable="false" title="Biograf&#xed;a" type="java.lang.Object"/>
+                    <Column editable="false" title="Edad" type="java.lang.Object"/>
                     <Column editable="false" title="T&#xed;tulo" type="java.lang.Object"/>
                     <Column editable="false" title="C&#xf3;digo" type="java.lang.Object"/>
                     <Column editable="false" title="Autor" type="java.lang.Object"/>
-                    <Column editable="false" title="A&#xf1;o de Publicaci&#xf3;n" type="java.lang.Object"/>
+                    <Column editable="false" title="A&#xf1;o de publicaci&#xf3;n" type="java.lang.Object"/>
                     <Column editable="true" title="Bibliograf&#xed;a" type="java.lang.Object"/>
-                    <Column editable="true" title="Editorial" type="java.lang.Object"/>
+                    <Column editable="false" title="Editorial" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -383,6 +406,32 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="lblTexto10">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Biograf&#xed;a"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblTexto11">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Edad"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtBiografia">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBiografiaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtEdad">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEdadActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
