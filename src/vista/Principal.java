@@ -157,7 +157,7 @@ public class Principal extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre Au", "Apellido Au", "Nacionalidad", "Título", "Código", "Autor", "Año de Publicación", "Bibliografía", "Editorial"
+                "Nombre Autor", "Apellido Autor", "Nacionalidad", "Título", "Código", "Autor", "Año de Publicación", "Bibliografía", "Editorial"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -282,70 +282,72 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtAnioPublicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioPublicacionActionPerformed
-        String anioPublicacion = txtAnioPublicacion getText();
+        String anioPublicacion = txtAnioPublicacion.getText();
     }//GEN-LAST:event_txtAnioPublicacionActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        String nombreAutor = txtNombreAutor getText();
-        String apellidoAutor = txtApellido getText();
-        String nacionalidad = txtNacionalidad getText();
-        String titulo = txtTitulo getText();
-        String codigo = txtCodigo getText();
-        String autor = txtAutor getText();
-        String anioPublicacion = txtAnioPublicacion getText();
-        String bibliografia = txtBibliografia getText();
-        String editorial = txtEditorial getText();
+        String nombreAutor = txtNombreAutor.getText();
+        String apellidoAutor = txtApellido.getText();
+        String nacionalidad = txtNacionalidad.getText();
+        String titulo = txtTitulo.getText();
+        String codigo = txtCodigo.getText();
+        String autor = txtAutor.getText();
+        String anioPublicacion = txtAnioPublicacion.getText();
+        String bibliografia = txtBibliografia.getText();
+        String editorial = txtEditorial.getText();
         
         
         
+        ////////////////////////////////////
         javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) jTable1.getModel();
-    model.addRow(new Object[]{nombreAutor, apellidoAutor, nacionalidad, titulo, codigo, autor, anioPublicacion, bibliografia, editorial });
+    model.addRow(new Object[]{nombreAutor, apellidoAutor, nacionalidad, titulo, codigo, autor, anioPublicacion, bibliografia, editorial});
     
     
-    txtNombreAutor getText("");
-    txtApellido getText("");
-    txtNacionalidad getText("");
-    txtTitulo getText("");
-    txtCodigo getText("");
-    txtAutor getText("");
-    txtAnioPublicacion getText("");
-    txtBibliografia getText("");
-    txtEditorial getText("");
+    txtNombreAutor.setText("");
+    txtApellido.setText("");
+    txtNacionalidad.setText("");
+    txtTitulo.setText("");
+    txtCodigo.setText("");
+    txtAutor.setText("");
+    txtAnioPublicacion.setText("");
+    txtBibliografia.setText("");
+    txtEditorial.setText("");
+    
     
     
         
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
-        String titulo = txtTitulo getText();
+        String titulo = txtTitulo.getText();
     }//GEN-LAST:event_txtTituloActionPerformed
 
     private void txtNombreAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreAutorActionPerformed
-        String nombreAutor = txtNombreAutor getText();
+        String nombreAutor = txtNombreAutor.getText();
     }//GEN-LAST:event_txtNombreAutorActionPerformed
 
     private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
-        String apellidoAutor = txtApellido getText();
+        String apellidoAutor = txtApellido.getText();
     }//GEN-LAST:event_txtApellidoActionPerformed
 
     private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
-        String nacionalidad = txtNacionalidad getText();
+        String nacionalidad = txtNacionalidad.getText();
     }//GEN-LAST:event_txtNacionalidadActionPerformed
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
-        String codigo = txtCodigo getText();
+        String codigo = txtCodigo.getText();
     }//GEN-LAST:event_txtCodigoActionPerformed
 
     private void txtAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAutorActionPerformed
-        String autor = txtAutor getText();
+        String autor = txtAutor.getText();
     }//GEN-LAST:event_txtAutorActionPerformed
 
     private void txtBibliografiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBibliografiaActionPerformed
-        String bibliografia = txtBibliografia getText();
+        String bibliografia = txtBibliografia.getText();
     }//GEN-LAST:event_txtBibliografiaActionPerformed
 
     private void txtEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEditorialActionPerformed
-        String editorial = txtEditorial getText();
+        String editorial = txtEditorial.getText();
     }//GEN-LAST:event_txtEditorialActionPerformed
 
     /**
