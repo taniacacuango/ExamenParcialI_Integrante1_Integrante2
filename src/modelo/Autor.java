@@ -12,8 +12,8 @@ public class Autor extends Persona {
     private String biografia;
     private String nacionalidad;
 
-    public Autor(){}
-    
+    public Autor() {}
+
     public Autor(String biografia, String nacionalidad, String nombre, String apellido, int cedula, int edad, int telefono, String direccion) {
         super(nombre, apellido, cedula, edad, telefono, direccion);
         this.biografia = biografia;
@@ -35,6 +35,18 @@ public class Autor extends Persona {
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
-  
-  
+
+    @Override
+    public String toString() {
+        return "Autor{" +
+                "nombre='" + getNombre() + '\'' +
+                ", apellido='" + getApellido() + '\'' +
+                ", cedula=" + getCedula() +
+                ", edad=" + getEdad() +
+                ", telefono=" + getTelefono() +
+                ", direccion='" + getDireccion() + '\'' +
+                ", biografia='" + biografia + '\'' +
+                ", nacionalidad='" + nacionalidad + '\'' +
+                '}';
+    }
 }
