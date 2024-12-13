@@ -15,11 +15,8 @@ public class Persona {
     private int edad;
     private int telefono;
     private String direccion;
-    
-    public Persona(){
-    }
-
-    public Persona(String nombre, String apellido, int cedula, int edad, int telefono, String direccion) {
+  public Persona(){}
+  public Persona(String nombre, String apellido, int cedula, int edad, int telefono, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -75,8 +72,19 @@ public class Persona {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
-    
+   
+    @Override
+public String toString() {
+    return "Persona{" +
+           "nombre='" + nombre + '\'' +
+           ", apellido='" + apellido + '\'' +
+           ", cedula=" + cedula +
+           ", edad=" + edad +
+           ", telefono=" + telefono +
+           ", direccion='" + direccion + '\'' +
+           '}';
+}
+
 }
  
 
