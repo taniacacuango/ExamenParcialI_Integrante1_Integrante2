@@ -324,11 +324,11 @@ public class Principal extends javax.swing.JFrame {
         String edad = txtEdad.getText();
         String titulo = txtTitulo.getText();
         String codigo = txtCodigo.getText();
-        String autor = txtAutor.getText();
-        String anioPublicacion = txtAnioPublicacion.getText();
-        String bibliografia = txtBibliografia.getText();
-        String editorial = txtEditorial.getText();
-        
+        String autor = txtAutor .getText();
+        String anioPublicacion = txtAnioPublicacion .getText();
+        String bibliografia = txtBibliografia .getText();
+        String editorial = txtEditorial .getText();
+
         
         
         ////////////////////////////////////
