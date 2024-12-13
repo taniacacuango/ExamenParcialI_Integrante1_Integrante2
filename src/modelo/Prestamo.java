@@ -9,5 +9,5 @@ package modelo;
  * @author HP
  */
 public interface Prestamo {
-    
+    boolean disponibilidad();
 }
